@@ -13,6 +13,11 @@
                     <label>Enable Sitelink Searchbox</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
+                <field id="strip_parameters_from_canonical" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Strip URL parameters from canonical</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Strip URL parameters, if e.g. a filter URL is called</comment>
+                </field>
                 <field id="company_name" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Company Name</label>
                 </field>

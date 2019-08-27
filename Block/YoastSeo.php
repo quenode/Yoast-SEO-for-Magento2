@@ -53,6 +53,18 @@ class YoastSeo extends Template
             '_current' => true,
             '_use_rewrite' => true
         ]);
+        
+        $parameterStrip = $this->_scopeConfig->getValue(
+            'yoastseo/general/strip_parameters_from_canonical',
+            ScopeInterface::SCOPE_STORES
+        );
+        
+        if ($canonical
+            && $parameterStrip == true
+            && strstr(substr($canonical, strrpos($canonical, '/')), '?') !== false) {
+            $canonical = substr($canonical, 0, strrpos($canonical, '/'));
+        }
+        
         if ($canonical
             && substr($canonical, -5) !== '.html'
             && substr($canonical, -1) !== '/') {
