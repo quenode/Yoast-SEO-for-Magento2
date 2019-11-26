@@ -91,7 +91,8 @@ class Init extends Template
      */
     public function getStore()
     {
-        if (!$this->hasData('store')) {
+        if (!$this->hasData('store')
+            || $this->getData('store')->getCode() === 'admin') {
             $storeId = $this->getRequest()->getParam(
                 'store',
                 $this->_storeManager->getDefaultStoreView()->getId()
