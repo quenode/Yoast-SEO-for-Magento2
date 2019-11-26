@@ -84,16 +84,18 @@ abstract class AbstractMetaProvider implements MetaProviderInterface
     }
 
     /**
-     * @return string
+     * @param mixed ...$args
+     * @return string|null
      */
-    public function getFirst()
+    public function getFirst(...$args)
     {
-        $args = func_get_args();
         $result = null;
-        foreach ($args as $arg) {
-            if (!empty($arg) && is_string($arg) && $arg !== '') {
-                $result = $arg;
-                break;
+        if ($args != null) {
+            foreach ($args as $arg) {
+                if (!empty($arg) && is_string($arg) && $arg !== '') {
+                    $result = $arg;
+                    break;
+                }
             }
         }
 
