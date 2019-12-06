@@ -1,3 +1,7 @@
+<?php
+/** @var MaxServ\YoastSeo\Block\Adminhtml\Score $block */
+if ($block->getRequest()->getParam('isAjax') !== 'true'):
+?>
 <div class="yoastScore-wrapper" data-bind="scope: 'yoastScore'">
     <div class="yoastScore-header">
         <span><strong><?php echo __('SEO Score'); ?></strong></span>
@@ -26,3 +30,4 @@
         }
     }
 </script>
+<?php endif; ?>
