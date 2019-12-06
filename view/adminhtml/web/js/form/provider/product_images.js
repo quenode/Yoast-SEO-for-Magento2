@@ -24,7 +24,8 @@ define([
                 images.push(image.outerHTML);
             });
 
-            if (!images.length && formData.data.product.media_gallery.images) {
+            // https://github.com/Yoast/Yoast-SEO-for-Magento2/issues/87
+            if (!images.length && formData.data.product.media_gallery != undefined && formData.data.product.media_gallery.images) {
                 $.each(formData.data.product.media_gallery.images, function (ignore, img) {
                     var src = yoastBoxConfig.productImageBaseUrl + img.file,
                         alt = img.label;
