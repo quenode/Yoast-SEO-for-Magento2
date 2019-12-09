@@ -93,11 +93,12 @@ class Init extends Template
     {
         if (!$this->hasData('store')
             || $this->getData('store')->getCode() === 'admin') {
+            $defaultStoreId = $this->_storeManager->getDefaultStoreView()->getId();
             $storeId = $this->getRequest()->getParam(
                 'store',
-                $this->_storeManager->getDefaultStoreView()->getId()
+                $defaultStoreId
             );
-            $store = $this->_storeManager->getStore($storeId);
+            $store = $this->_storeManager->getStore($storeId?:$defaultStoreId);
             $this->setData('store', $store);
         }
 
