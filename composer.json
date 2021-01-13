@@ -2,7 +2,7 @@
   "name": "e-conomix/magento-module-yoastseo",
   "description": "Yoast SEO integration by MaxServ",
   "require": {
-    "magento/framework": "^101.0|^102.0",
+    "magento/framework": "^101.0|^102.0|^103.0",
     "magento/module-catalog": "*",
     "magento/module-cms": "*",
     "magento/module-config": "*"
