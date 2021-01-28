@@ -18,6 +18,7 @@ define([
             metaElements: [
                 'container_meta_title',
                 'meta_title',
+                'title',
                 'container_meta_description',
                 'meta_description',
                 'container_meta_keywords',
