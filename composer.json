@@ -1,5 +1,5 @@
 {
-  "name": "e-conomix/magento-module-yoastseo",
+  "name": "quenode/magento-module-yoastseo",
   "description": "Yoast SEO integration by MaxServ",
   "require": {
     "magento/framework": "^101.0|^102.0|^103.0",
