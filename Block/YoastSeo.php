@@ -159,8 +159,10 @@ class YoastSeo extends Template
             'yoastseo/twitter/manager_account',
             ScopeInterface::SCOPE_STORE
         );
-        if (substr($twitterUser, 0, 1) !== '@') {
+        if ($twitterUser !== null ) {
+          if (substr($twitterUser, 0, 1) !== '@') {
             $twitterUser = '@' . $twitterUser;
+          }
         }
         if ($twitterUser === '@') {
             $twitterUser = '';
