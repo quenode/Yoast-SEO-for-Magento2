@@ -70,7 +70,8 @@ abstract class AbstractMetaProvider implements MetaProviderInterface
     {
         $baseUrl = $this->urlBuilder->getBaseUrl();
         $root = $this->directoryList->getRoot() . '/';
-        $image = $image ? str_replace($baseUrl, $root, $imageUrl) : "";
+        #$image = $image ? str_replace($baseUrl, $root, $imageUrl) : "";
+        $image = str_replace($baseUrl, $root, $imageUrl);
         $meta = [];
         if (file_exists($image)) {
             $size = getimagesize($image);
